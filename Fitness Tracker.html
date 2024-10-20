@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Measurement Tracker</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Fitness Measurement Tracker</h1>
+
+        <div class="actions">
+            <button class="btn" id="show-form-btn">Add Measurements</button>
+        </div>
+
+        <h3>Measurement History</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Weight (kg)</th>
+                        <th>Body Fat (%)</th>
+                        <th>Chest (cm)</th>
+                        <th>Waist (cm)</th>
+                        <th>Hips (cm)</th>
+                        <th>Left Arm (cm)</th>
+                        <th>Right Arm (cm)</th>
+                        <th>Left Thigh (cm)</th>
+                        <th>Right Thigh (cm)</th>
+                        <th>Left Calf (cm)</th>
+                        <th>Right Calf (cm)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="measurement-body">
+                    <!-- Rows added by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="measurement-form" id="measurement-form">
+            <h3 id="form-title">Add New Measurement</h3>
+            <form id="measurement-input-form">
+                <input type="hidden" id="edit-index">
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" required>
+
+                <label for="bodyFat">Body Fat Percentage (%):</label>
+                <input type="number" id="bodyFat" required>
+
+                <label for="chest">Chest (cm):</label>
+                <input type="number" id="chest" required>
+
+                <label for="waist">Waist (cm):</label>
+                <input type="number" id="waist" required>
+
+                <label for="hips">Hips (cm):</label>
+                <input type="number" id="hips" required>
+
+                <label for="leftArm">Left Arm (cm):</label>
+                <input type="number" id="leftArm" required>
+
+                <label for="rightArm">Right Arm (cm):</label>
+                <input type="number" id="rightArm" required>
+
+                <label for="leftThigh">Left Thigh (cm):</label>
+                <input type="number" id="leftThigh" required>
+
+                <label for="rightThigh">Right Thigh (cm):</label>
+                <input type="number" id="rightThigh" required>
+
+                <label for="leftCalf">Left Calf (cm):</label>
+                <input type="number" id="leftCalf" required>
+
+                <label for="rightCalf">Right Calf (cm):</label>
+                <input type="number" id="rightCalf" required>
+
+                <button class="btn" type="submit" id="save-btn">Save Measurement</button>
+            </form>
+        </div>
+        <a href="Fitness Plan.html" class="link">
+            Go to Fitness Plan
+        </a>
+    </div>
+
+    <script src="scripts/measurement.js"></script>
+
+</body>
+
+</html>
