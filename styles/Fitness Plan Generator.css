@@ -1,0 +1,199 @@
+/* Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 25px 20px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1rem;
+}
+
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccd5e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9fbfd;
+    transition: all 0.3s ease;
+}
+
+form input[type="number"]:focus,
+form select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    background-color: #ffffff;
+}
+
+/* Navigation Buttons */
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.next-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.next-btn:hover {
+    background-color: #0056b3;
+}
+
+.prev-btn {
+    background-color: #6c757d;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.prev-btn:hover {
+    background-color: #565e64;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 8px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.progress {
+    background-color: #007bff;
+    height: 100%;
+    border-radius: 5px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2em;
+    flex-direction: column;
+    display: none;
+    /* Hidden initially */
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.loading-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #FFD700;
+    /* Gold color for emphasis */
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.8);
+    animation: pulsate 1.5s ease-in-out infinite;
+}
+
+/* Highlighted styles for random fact */
+.random-fact {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #00FA9A;
+    /* Medium spring green */
+    background: rgba(0, 250, 154, 0.2);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 80%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Pulsate animation for loading text */
+@keyframes pulsate {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Fade-in animation for random fact */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

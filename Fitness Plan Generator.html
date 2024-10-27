@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Plan Generator</title>
+    <link rel="stylesheet" href="styles/Fitness Plan Generator.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Enter Your Fitness Information</h1>
+
+        <!-- Progress Indicator -->
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="loading-overlay" id="loadingOverlay">
+            <p class="loading-text">Generating fitness plan...</p>
+            <p id="randomFact" class="random-fact"></p>
+        </div>
+
+        <form id="fitnessForm">
+            <!-- Step 1: Basic Body Measurements -->
+            <div class="form-step" id="step-1">
+                <h2>Step 1: Basic Body Measurements</h2>
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required>
+
+                <label for="chest">Chest (cm):</label>
+                <input type="number" id="chest" name="chest" required>
+
+                <label for="waist">Waist (cm):</label>
+                <input type="number" id="waist" name="waist" required>
+
+                <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+            </div>
+
+            <!-- Step 2: Additional Body Measurements -->
+            <div class="form-step" id="step-2">
+                <h2>Step 2: Additional Body Measurements</h2>
+                <label for="hips">Hips (cm):</label>
+                <input type="number" id="hips" name="hips" required>
+
+                <label for="neck">Neck (cm):</label>
+                <input type="number" id="neck" name="neck" required>
+
+                <label for="leftArm">Left Arm (cm):</label>
+                <input type="number" id="leftArm" name="leftArm" required>
+
+                <label for="rightArm">Right Arm (cm):</label>
+                <input type="number" id="rightArm" name="rightArm" required>
+
+                <label for="leftThigh">Left Thigh (cm):</label>
+                <input type="number" id="leftThigh" name="leftThigh" required>
+
+                <label for="rightThigh">Right Thigh (cm):</label>
+                <input type="number" id="rightThigh" name="rightThigh" required>
+
+                <label for="leftCalf">Left Calf (cm):</label>
+                <input type="number" id="leftCalf" name="leftCalf" required>
+
+                <label for="rightCalf">Right Calf (cm):</label>
+                <input type="number" id="rightCalf" name="rightCalf" required>
+
+                <button type="button" class="prev-btn" onclick="prevStep()">Previous</button>
+                <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+            </div>
+
+            <!-- Step 3: Dietary Preferences and Activity Level -->
+            <div class="form-step" id="step-3">
+                <h2>Step 3: Dietary and Activity Info</h2>
+                <label for="diet">Dietary Preference:</label>
+                <select id="diet" name="diet" required>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="non-vegetarian">Non-Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                </select>
+
+                <label for="intensity">Daily Activity Level:</label>
+                <select id="intensity" name="intensity" required>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+
+                <button type="button" class="prev-btn" onclick="prevStep()">Previous</button>
+                <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+            </div>
+
+            <!-- Step 4: Profession -->
+            <div class="form-step" id="step-4">
+                <h2>Step 4: Profession</h2>
+                <label for="profession">Profession Category:</label>
+                <select id="profession" name="profession" required>
+                    <option value="sedentary">Sedentary (e.g., desk job)</option>
+                    <option value="light">Light Activity (e.g., teacher)</option>
+                    <option value="active">Active (e.g., manual labor)</option>
+                    <option value="very active">Very Active (e.g., athlete)</option>
+                </select>
+
+                <button type="button" class="prev-btn" onclick="prevStep()">Previous</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/fitness-plan-generator.js"></script>
+</body>
+
+</html>
